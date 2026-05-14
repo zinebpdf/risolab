@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'adaxi';
+  src: url(fonts/ADAXI.ttf);
+}
+
+
+body {
+  margin: 0.8rem;
+  padding: 0;
+  font-family: 'adaxi';
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 1.5em;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0000FF;
+  border-radius: 10px;
+}
+
+ul #risolab {
+  float: left;
+}
+
+ul .categorie {
+float: right;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px 20px;
+  padding-top: 20px;
+  text-decoration: none;
+  font-size: 1.8em;
+}
+/* les range sliders customisés pour changer les paramètres de tramage*/
+.slider{
+height: 7px;
+background: #0000ff;
+outline: none;
+border-radius: 10px;
+transition: opacity .1s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 7px;
+  height: 16px;
+  background: #0000ff;
+  border: none;
+  cursor: pointer;
+}
+
+/* la boîte englobant le range slider, les boutons */
+.sliderContainer, .bouton, #rouge,  #jaune, #rose, #bleu, #noir, #vert{
+background: white;
+border: solid 3px #0000ff;
+width: fit-content;
+border-radius: 10px;
+padding-top: 4px;
+padding-bottom: 4px;
+padding-left: 4px;
+padding-right: 4px;
+color: #0000FF;
+box-shadow: 3px 3px 4px;
+margin-bottom: 1.5rem;
+margin-top: 0em;
+margin-left: 0.2rem;
+margin-right: 0.2em;
+font-size: 1.5em;
+}
+/*boîte englobant les couleurs*/
+#couleurs, #tramage{
+border: solid 3px #0000ff;
+width: fit-content;
+border-radius: 10px;
+padding-top: 15px;
+padding-bottom: 15px;
+padding-left: 10px;
+padding-right: 10px;
+box-shadow: 3px 3px 4px;
+margin-bottom: 1.5rem;
+margin-top: 1.5rem;
+color: #0000FF;
+}
+
+
+
+
+#defaultCanvas0{
+float: right;
+}
+
+#couleursTitre{
+margin-top: 1.5rem;
+}
+

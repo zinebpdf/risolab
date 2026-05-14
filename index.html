@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>risolab</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+			  src="https://code.jquery.com/jquery-3.7.1.js"
+			  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+			  crossorigin="anonymous"></script>
+    <script src="lib/p5.js"></script>
+    <script src="lib/p5.riso.js"></script>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/p5.js-export/p5.js-export.js"></script>
+</head>
+
+<body>
+<!--barre de navigation horizontale-->
+<ul>
+  <li id="risolab"><a href="#">risolab 0.0</a></li>
+  <li class="categorie categorie_1"><a href="#">séparateur de couleurs</a></li>
+  <li class="categorie categorie_2"><a href="#">nuancier de couleurs</a></li>
+  <li class="categorie categorie_3"><a href="#">expérimentations</a></li>
+</ul>
+
+
+
+<div id="interface">
+<!--boutons pour choisir les couleurs de risographie-->
+<span id="couleursTitre" class="bouton">couleurs</span>
+        <div id="couleurs">
+            <span id="rouge" onclick="changer_couleur('rouge');;boutonCouleur()">rouge</span> 
+
+            <span id="jaune" onclick="changer_couleur('jaune');">jaune</span>
+
+            <span id="rose" onclick="changer_couleur('rose');">rose fluorescent</span>
+
+            <span id="bleu" onclick="changer_couleur('bleu');">bleu</span>
+
+            <span id="vert" onclick="changer_couleur('vert');">vert forest</span>
+
+            <span id="vert" onclick="changer_couleur('noir');">noir</span>
+        </div>
+
+
+<span id="tramageTitre" class="bouton">tramage</span>
+<!--les boutons pour les différents paramètres : fréquence, angle de la trame et l'intensité-->
+    <div id="tramage">
+<!--range slider pour la fréquence de trame-->
+<div class="sliderContainer sliderContainer_1">
+fréquence
+<input class="action slider" type="range" id="frequence"  min="1" max="100
+" value="3">
+<span id="demoFrequence"></span>
+</div>
+
+<!--range slider pour l'angle de la trame-->
+<div class="sliderContainer sliderContainer_2">
+angle
+<input class="action slider" type="range" id="angle"  min="1" max="360" value="45">
+<span id="demoAngle"></span>
+</div>
+
+<!--range slider pour l'inténsité de la trame-->
+<div class="sliderContainer sliderContainer_3">
+intensité
+<input class="action slider" type="range" id="intensite"  min="1" max="255" value="90">
+<span id="demoIntensite"></span>
+</div>
+
+<!--boutons pour les différents types de trame-->
+<span class='bouton' id="ligne" onclick="changer_trame(0);">ligne</span> 
+<span class='bouton' id="carre" onclick="changer_trame(1);">carré</span>
+<span class='bouton' id="circle" onclick="changer_trame(2);">cercle</span>  
+<span class='bouton' id="ellipse" onclick="changer_trame(3);">ellipse</span>
+<span class='bouton' id="cross" onclick="changer_trame(4);">croix</span>
+
+</div>
+
+
+
+
+<script>
+// script pour afficher la valeur en direct de la fréquence de trame
+var sliderFrequence = document.getElementById("frequence");
+var demo = document.getElementById("demoFrequence");
+demo.innerHTML = sliderFrequence.value;
+
+sliderFrequence.oninput = function(){
+demo.innerHTML = this.value;
+}
+</script>
+
+<script>
+// script pour afficher la valeur en direct de l'angle de la trame
+var sliderAngle = document.getElementById("angle");
+var demo2 = document.getElementById("demoAngle");
+demo2.innerHTML = sliderAngle.value;
+
+sliderAngle.oninput = function(){
+demo2.innerHTML = this.value;
+}
+</script>
+
+<script>
+// script pour afficher la valeur en direct de l'intensité de la trame
+var sliderIntensite = document.getElementById("intensite");
+var demo3 = document.getElementById("demoIntensite");
+demo3.innerHTML = sliderIntensite.value;
+
+sliderIntensite.oninput = function(){
+demo3.innerHTML = this.value;
+}
+</script>
+
+<script> 
+// script pour changer la couleur des boutons lorsque cliqué
+/*function boutonCouleur(){
+let couleurBouton;
+let boutonRouge = document.getElementById('rouge');
+
+boutonRouge.addEventListener('click', () => boutonRouge.style.color = '#ff665e');
+boutonRouge.addEventListener('click', () => boutonRouge.style.border = 'solid 3px #ff665e');
+
+}*/
+</script> 
+</body>
